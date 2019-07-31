@@ -114,7 +114,7 @@ body {
 .u-margin-top-huge {
   margin-bottom: 10rem; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -122,7 +122,9 @@ body {
   border-radius: 10rem;
   transition: all .2s;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -131,7 +133,8 @@ body {
     transform: scaleX(1.4), scaleY(1.6);
     opacity: 0; }
 
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
@@ -304,7 +307,7 @@ body {
   padding: 2.5rem;
   text-align: center;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.35);
   transition: transform .3s; }
   .feature-box__icon {
     font-size: 6rem;
@@ -320,12 +323,13 @@ body {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #fff, 0.6;
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
   font-size: 1.6rem;
-  transform: skewX(-12deg); }
+  transform: skewX(-12deg);
+  position: relative; }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -335,6 +339,17 @@ body {
     transform: translateX(-3rem); }
   .story__img {
     height: 100%; }
+  .story__text {
+    transform: skewX(-12deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center; }
 
 .row {
   max-width: 114rem;
@@ -409,5 +424,5 @@ body {
   margin-top: -10rem; }
 
 .section-stories {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: #f7f7f7; }
