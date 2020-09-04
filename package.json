@@ -9,7 +9,7 @@
   "author": "William",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.1"
   },
   "dependencies": {
     "compile-sass": "^0.1.3"
